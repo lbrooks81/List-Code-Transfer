@@ -38,3 +38,36 @@ npos here:
 • The default constructor should allocate enough memory for 4 elements. See the tips for help.
 • If a method will not affect the state of the object, mark the method as constant.
 • Your project should have three files: your main.cpp, MyList.cpp, and MyList.h.
+
+
+# Ordered List Implementation
+
+Translate the MyOrderedList2 class from C# into a class in C++. Name this class MyOrderedList.
+Ensure that all functionality mirrors the original class.
+
+To complete this lab, you will need to implement class inheritance in C++. Here are some links which
+will help you learn this quickly:
+• https://www.w3schools.com/cpp/cpp_inheritance.asp
+• https://www.tutorialspoint.com/cplusplus/cpp_inheritance.htm
+• https://www.programiz.com/cpp-programming/function-overriding
+Since C++ does not have a CompareTo() function like C#, only allow MyOrderedList to work with
+numeric types. This will enable the use of standard comparison operators (<, >, etc.).
+
+Use the following concept in your MyOrderedList header file:
+
+template <typename T>
+concept Numeric = std::is_arithmetic_v<T>;
+
+This concept will enforce a constraint on the types allowed in MyOrderedList.
+
+Important: Do not allow the insert() method to be called with an index argument. If it is, throw a
+std::logic_error exception.
+
+Additionally, change certain members (such as size and capacity) from private to protected,
+to allow derived classes access to them.
+
+Constraints
+• All methods defined in the source file must have their declarations in the header file (.h).
+• Use camelCase for naming variables and methods in C++. Classes should be named using
+PascalCase. Refer to the Tips section for more guidance.
+• If a method does not modify the state of the object, mark it as const.
