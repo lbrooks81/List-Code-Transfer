@@ -1,4 +1,4 @@
-# List-from-C-to-C
+# List-from-C#-to-C++
 
 Specifications
 
